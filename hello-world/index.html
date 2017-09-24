@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Nasreen's blog</title>
+    <title>Yasmin's blog</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -95,52 +95,7 @@
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
       <hr>
-<h1>Mutable Default Parameters in Python</h1><p><br> This week I learnt about the mutable default parameter trick, and it's pretty neat. I came across it reading (rather than while trying to fix something), but I guess it's one of those programming things that make you feel like a wizard when you use it knowingly, and a muggle while you're trying to figure out why something doesn't work.</p>
-
-<p><br>If we do this:  <br></p>
-
-<pre><code>def suprise(some_list=[1,2,3]):
-
-    some_list.append(4)
-
-    print some_list
-
-suprise()
-</code></pre>
-
-<p><br> We get:   <br></p>
-
-<pre><code>-- &gt; [1, 2, 3, 4]
-</code></pre>
-
-<p><br>If we call the function again: <br></p>
-
-<pre><code>suprise()
-</code></pre>
-
-<p><br>We might expect the same result, but what we would actually get is:<br></p>
-
-<pre><code>--&gt; [1, 2, 3, 4, 4]
-</code></pre>
-
-<p><br>This is because the default list is created when the function is first defined, and the same default list is used each time.  </p>
-
-<p>This happens because functions in python are objects.  When python executes a function statment it creates a new function object (using the namespace and the function code).  The default is evaluated, and then the same default is used each time the function is called.  If it's a mutable default parameter it can be changed, and whenever we use it while calling the function we will get the most up to date version of it.</p>
-
-<p><br>Another example:<br></p>
-
-<pre><code>suprise([1])
---&gt; [1, 4]
-suprise()
---&gt; [1, 2, 3, 4, 4, 4]
-</code></pre>
-
-<p><br>A way to avoid this if necessary, is to use a place holder instead of a default that can be changed.  For example:<br></p>
-
-<pre><code>def a_func(some_list=None):
-    if some_list == None:
-        some_list = []
-</code></pre>
+<h1>Hello World</h1><p>Hello World </p>
 </div>
 </div>
 
